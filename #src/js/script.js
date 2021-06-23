@@ -1,1 +1,1 @@
-@@include('../js/alert.js');
+@@include('../js/modal.js');
