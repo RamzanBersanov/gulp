@@ -76,7 +76,10 @@ let { src, dest } = require('gulp'),
     clean_css     = require('gulp-clean-css'), // сжимает css
     rename        = require('gulp-rename'), // добавляет .min.css к названию, не файл добавляет а название, но способтвует созданию потому, что 2 раза выгружаешь в dist
     uglify        = require('gulp-uglify-es').default, // Специальный плагин для сжатия js
-    babel = require('gulp-babel'); // Переводит современный синтаксис es6 в старый синтаксис es5
+    babel = require('gulp-babel'), // Переводит современный синтаксис es6 в старый синтаксис es5
+    imagemin = require('gulp-imagemin'),
+    ttf2woff = require('gulp-ttf2woff'),
+    ttf2woff2 = require('gulp-ttf2woff2')
 
 function browserSync(params) { // это у него не самописная штука, он взял её из документации
     browsersync.init({
@@ -140,10 +143,37 @@ function js() {
      функции для gulp */
 }
 
+const images = () => {
+    return src(['./#src/images/**.jpg', './#src/images**.jpg', './#src/images**.jpeg'])
+    .pipe(imagemin([
+        imagemin.gifsicle({interlaced: true}),
+        imagemin.mozjpeg({quality: 75, progressive: true}),
+        imagemin.optipng({optimizationLevel: 3}),
+        imagemin.svgo({
+            plugins: [
+                {removeViewBox: true},
+                {cleanupIDs: false}
+            ]
+        })
+    ]))
+    .pipe(dest('dist/images'))
+}
+
+const fonts = () => {
+    src('#src/fonts/**.ttf')
+        .pipe(ttf2woff())
+        .pipe(dest('./dist/fonts/'))
+    return src('#src/fonts/**.ttf')
+        .pipe(ttf2woff2())
+        .pipe(dest('./dist/fonts/'))
+}
+
 function watchFiles(params) {
     gulp.watch([path.watch.html], html); // Здесь происходит только слежка за html
     gulp.watch([path.watch.css], css); // здесь scss
     gulp.watch([path.watch.js], js);  // здесь js
+    gulp.watch([path.watch.img], images);
+    gulp.watch('#src/fonts/**.ttf', fonts);
 } // watch который написан вот здесь gulp.watch это из объекта path
 // После массива идёт функция html
 
@@ -153,7 +183,7 @@ function clean(params){
 
 // отвечает за последовательность команд html clean итд
 
-let build = gulp.series(clean, gulp.parallel(js, css, html)) // gulp.parallel(css,html) сделали, чтобы они работали вместе, одновременно
+let build = gulp.series(clean, gulp.parallel(js, images, css, html, fonts)) // gulp.parallel(css,html) сделали, чтобы они работали вместе, одновременно
 let watch = gulp.parallel(build, watchFiles, browserSync);
 // Смотри за галп и паралельно запусти функцию build,browserSync
 
@@ -161,6 +191,8 @@ let watch = gulp.parallel(build, watchFiles, browserSync);
 exports.js = js;
 exports.css = css;
 exports.html = html;
+exports.images = images;
+exports.fonts = fonts;
 exports.build = build;
 
 

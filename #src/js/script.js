@@ -1,1 +1,1 @@
-@@include('../js/modal.js');
+@@include('../js/modal.js')
