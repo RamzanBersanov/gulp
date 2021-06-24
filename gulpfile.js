@@ -144,7 +144,7 @@ function js() {
 }
 
 const images = () => {
-    return src(['./#src/images/**.jpg', './#src/images**.jpg', './#src/images**.jpeg'])
+    return src('#src/images/**/*')
     .pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
         imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -157,6 +157,7 @@ const images = () => {
         })
     ]))
     .pipe(dest('dist/images'))
+    .pipe(browsersync.stream())
 }
 
 const fonts = () => {
