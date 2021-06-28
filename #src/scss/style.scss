@@ -17,9 +17,11 @@ html,body{
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-    background: rgb(184, 183, 183);
+    font-size: 16px;
+    font-weight: 400;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans', 'Montserrat', sans-serif;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -36,6 +38,34 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
+:root {
+    --light-blue: #E5F4FF;
+    --blue: #aad8f8;
+   }
 
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    line-height:40px;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+@import 'header.scss';
 @import 'innovation.scss';
+@import 'advantages.scss';
+@import 'products.scss';
 @import 'modal.scss';
+@import 'media.scss';
