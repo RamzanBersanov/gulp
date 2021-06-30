@@ -171,8 +171,13 @@ const fonts = () => {
 
 const libs = () => {
     src('#src/libs/*.js')
-        .pipe(fileinclude())
-        .pipe(dest('dist/libs.js'))
+        .pipe(dest('dist/libs'))
+        .pipe(browsersync.stream())
+}
+
+const libsCss = () => {
+    src('#src/css-libs/**.css')
+        .pipe(dest('dist/css-libs'))
         .pipe(browsersync.stream())
 }
 
@@ -183,6 +188,7 @@ function watchFiles(params) {
     gulp.watch([path.watch.img], images);
     gulp.watch('#src/fonts/**.ttf', fonts);
     gulp.watch('#src/libs/*.js', libs);
+    gulp.watch('#src/css-libs/*.css', libsCss);
 } // watch который написан вот здесь gulp.watch это из объекта path
 // После массива идёт функция html
 
@@ -192,13 +198,14 @@ function clean(params){
 
 // отвечает за последовательность команд html clean итд
 
-let build = gulp.series(clean, gulp.parallel(js,libs, images, css, html, fonts)) // gulp.parallel(css,html) сделали, чтобы они работали вместе, одновременно
+let build = gulp.series(clean, gulp.parallel(js,libs, images, libsCss, css, html, fonts)) // gulp.parallel(css,html) сделали, чтобы они работали вместе, одновременно
 let watch = gulp.parallel(build, watchFiles, browserSync);
 // Смотри за галп и паралельно запусти функцию build,browserSync
 
 // watch из объета path
 exports.js = js;
 exports.libs = libs;
+exports.libsCss = libsCss;
 exports.css = css;
 exports.html = html;
 exports.images = images;
