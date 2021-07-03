@@ -148,6 +148,16 @@
     .header__container {
     justify-content: flex-end;
 }
+
+.subscribe__content {
+    flex-direction: column;
+}
+
+.subscribe__text {
+    margin-right: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
 }
 
 @media screen and (max-width:480px) {
