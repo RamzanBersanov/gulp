@@ -13,7 +13,9 @@
                 $(this).addClass("active");
                 
                 var imgsrc = $(this).attr("data-src");
-                $(this).parents(".product_content").find("img").attr("src", imgsrc);
+                $(this).parents(".product__content").find("img").attr("src", imgsrc);
             })
         })
     })
+
+    
