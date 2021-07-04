@@ -1,0 +1,59 @@
+.questions__title {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.questions__item {
+    display: flex;
+}
+.questions__item:last-child {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.questions__price, .questions__expectation {
+    font-family: Playfair Display;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 148.68%;
+    margin-bottom: 30px;
+}
+
+.questions__content {
+    width: 600px;
+}
+
+.questions__adv {
+    width: 300px;
+}
+
+.questions__img img{
+    width: 470px;
+    height: 540px;
+    margin-right: 60px;
+}
+
+.questions__text {
+    font-weight: 600;
+    line-height: 148.68%;
+    font-family: 'Open Sans';
+    margin-bottom: 10px;
+}
+
+.questions__subtext {
+    margin-bottom: 40px;
+}
+
+.questions__adv {
+    margin-bottom: 15px;
+}
+
+.questions__image img{
+    width: 470px;
+    height: 440px;
+}
+

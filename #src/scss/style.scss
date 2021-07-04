@@ -21,7 +21,7 @@ html,body{
     font-weight: 400;
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    font-family: 'Open Sans', 'Montserrat', sans-serif;
+    font-family: 'Open Sans', 'Montserrat', 'Playfair Display', sans-serif;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -56,7 +56,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Playfair Display;
     line-height:40px;
     font-weight: 500;
     font-size: 30px;
@@ -68,5 +68,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 @import 'advantages.scss';
 @import 'products.scss';
 @import 'subscribe.scss';
-@import 'modal.scss';
+@import 'questions.scss';
+@import 'reviews.scss';
 @import 'media.scss';
