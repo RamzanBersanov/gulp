@@ -1,0 +1,43 @@
+.footer {
+    margin-top: 60px;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__item {
+    display: flex;
+}
+
+.footer__personal {
+    margin-right: 150px;
+    width: 170px;
+}
+
+.footer__contact {
+    width: 140px;
+}
+
+.footer__icons {
+    background: url('../images/iconYoutube.svg');
+    width: 25.43px;
+    height: 17.71px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer__icon {
+    margin-left: 60px;
+}
+
+.footer__list {
+    display: flex;
+}
+
+.footer {
+    background-color: #F0F3F5;
+    padding: 70px;
+}

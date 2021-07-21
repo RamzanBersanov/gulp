@@ -8,30 +8,14 @@
     }
 }
 
-@media screen and (max-width:980px) {
-    .header__works {
-        margin-left: 20px;
-    }
-
-    .header__name {
-        font-size: 55px;
-    }
-
-    .header__images {
-        height: 400px;
-    }
-
-    .header__descr {
-        margin-bottom: 30px;
-    }
-
-    .menu__link {
-        font-size: 16px;
-        white-space: nowrap;
-    }
+@media (max-width: 1210px) {
+    
 }
 
+
 @media (max-width: 992px) {
+
+
    .questions__wrapper {
        display: flex;
        flex-direction: column-reverse;
@@ -57,6 +41,62 @@
 
     .questions__image img, .questions__img img {
         margin-bottom: 40px;
+    }
+
+    .reviews__img img {
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+    }
+
+    .reviews__text {
+        width: 400px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .reviews__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .owl-prev {
+        right: 30%;
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: -15%; 
+        width: 100%;
+        text-align: center;
+    }
+
+    .owl-theme .owl-nav {
+        margin-top: -55px;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .header__works {
+        margin-left: 20px;
+    }
+
+    .header__name {
+        font-size: 55px;
+    }
+
+    .header__images {
+        height: 400px;
+    }
+
+    .header__descr {
+        margin-bottom: 30px;
+    }
+
+    .menu__link {
+        font-size: 16px;
+        white-space: nowrap;
     }
 }
 
@@ -203,6 +243,22 @@
     height: 410px;
 }
 
+.owl-nav {
+    display: none;
+}
+
+.reviews__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reviews__img img {
+    margin-right: 0px;
+    margin-bottom: 15px;
+}
+
 }
 
 @media screen and (max-width:480px) {
@@ -228,6 +284,22 @@
     .questions__image img{
         width: 400px;
         height: 370px;
+    }
+
+    .reviews__text {
+        width: 270px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .reviews__name {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+
+    .reviews__img img {
+        margin-bottom: 15px;
     }
 }
 

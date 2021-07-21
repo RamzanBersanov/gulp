@@ -2,17 +2,18 @@
     margin-top: 60px;
     text-align: center;
     font-size: 40px;
+    margin-bottom: 50px;
 }
 
 .reviews__content {
     display: flex;
     align-items: center;
-    justify-content: space-around;
 }
 
 .reviews__img img{
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
+    margin-right: 30px;
 }
 
 .reviews__name {
@@ -31,4 +32,69 @@
     color: #777978;
     font-size: 25px;
     line-height: 32px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #000;
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: -32%; 
+    width: 100%;
+    text-align: center;
+}
+
+.owl-dots span {
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.owl-prev, .owl-next {
+    position: absolute;
+    right: 20%;
+    z-index: 20;
+}
+
+.owl-prev {
+    right: 28%;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+    background: url('../images/next.svg') 0 0 / 100% no-repeat;
+    width: 60px;
+    height: 40px;
+    font-size: 0;
+    transition: .3s ease;
+    font-size: 0;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    background: url('../images/previous.svg') 0 0 / 100% no-repeat;
+    background-color: black;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    background: url('../images/next.svg') 0 0 / 100% no-repeat;
+    background-color: black;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover {
+    background: url('../images/previous.svg') 0 0 / 100% no-repeat;
+    background-color: rgb(1, 36, 42);
+}
+
+.owl-carousel .owl-nav button.owl-next:hover {
+    background: url('../images/next.svg') 0 0 / 100% no-repeat;
+    background-color: rgb(1, 36, 42);
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    border-radius: 0px;
 }
