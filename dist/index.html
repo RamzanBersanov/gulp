@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -335,10 +335,10 @@
     <div class="container">
         <div class="subscribe__content">
             <div class="subscribe__text">Оставьте свой e-mail для подписки чтобы узнавать о новых коллекцияХ Анны Канц и получите скидку 10% на все заказы будьте первыми!</div>
-            <div class="subscribe__form">
+            <form class="subscribe__form">
                 <input class="subscribe__email" placeholder="e-mail">
                 <button class="subscribe__button btn">Хочу получить подписку</button>
-            </div>
+            </form>
         </div>
     </div>
 </section>
@@ -377,7 +377,7 @@
     </div>
 </div>
 </section>
-<section class="reviews questions page__section_6">
+<section class="reviews page__section_6">
     <div class="container">
         <div class="reviews__title title">
             Отзывы клиентов
@@ -409,37 +409,37 @@
 </section>
 <section class="consultation page__section_7">
     <div class="container">
-        <div class="consultation__content">
-            <div class="consultation__wrapper">
+        <form class="consultation__content">
+            <div class="consultation__wrapper"  for="phone">
                 <div class="consultation__form">
                     <div class="consultation__title">Заполните форму</div>
                     <div class="consultation__text">И наш стилист перезвонит вам, чтобы обсудить мерки или сразу же отправить одну из моделей.</div>
                     <input type="text" placeholder="Имя" class="consultation__name">
-                    <input type="text" placeholder="Телефон" class="consultation__surname">
+                    <input type="text" id="phone" placeholder="" class="consultation__surnum">
                     <button class="consultation__button btn">Оставить заявку</button>
                     <div class="consultation__personal-data">Если вы оставляете заявку вы даете право на обработку ваших персональных данных</div>
                 </div>
             </div>
             <div class="consultation__img"><img src="../images/consultation-img.png" alt=""></div>
-        </div>
+        </form>
     </div>
 </section>
 <footer class="footer">
     <div class="container">
         <div class="footer__content">
             <div class="footer__item">
-            <p class="footer__personal">политика конфиденциальности</p>
+            <a class="footer__personal">политика конфиденциальности</a>
             <div class="footer__contact">
                 <p>Контакты </p>
-                <a href="+7 (800) 334 34 88">+7 (800) 334 34 88</a>
+                <a class="footer__contact-number" href="tel:+78003343488">+7 (800) 334 34 88</a>
             </div>
         </div>
         <div class="footer__item">
             <ul class="footer__list">
-                <li class="footer__icon"><img src="../images/iconVK.svg" alt=""></li>
-                <li class="footer__icon"><img src="../images/iconYoutube.svg" alt=""></li>
-                <li class="footer__icon"><img src="../images/iconFB.svg" alt=""></li>
-                <li class="footer__icon"><img src="../images/iconTwitter.svg" alt=""></li>
+                <li class="footer__icon"><a href="#"><img src="../images/iconVK.svg" alt=""></a></li>
+                <li class="footer__icon"><a href="#"><img src="../images/iconYoutube.svg" alt=""></a></li>
+                <li class="footer__icon"><a href="#"><img src="../images/iconFB.svg" alt=""></a></li>
+                <li class="footer__icon"><a href="#"><img src="../images/iconTwitter.svg" alt=""></a></li>
             </ul>
         </div>
         </div>
@@ -450,6 +450,7 @@
 
 <script src="../libs/jquery.js"></script>
 <script src="../libs/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
 <script src="../js/script.min.js"></script>
 </body>
 </html>

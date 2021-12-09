@@ -35,7 +35,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   background: white;
-  color: black;
+  color: #000;
   font-family: 'Open Sans', 'Montserrat', 'Playfair Display', sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -678,8 +678,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .questions__title {
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin: 60px 0 50px;
   text-align: center;
   font-weight: 700;
   font-size: 40px;
@@ -859,6 +858,8 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .consultation {
   margin-top: 100px;
+  background-color: var(--light-blue);
+  padding: 30px;
 }
 
 .consultation__form {
@@ -874,24 +875,17 @@ body._touch .menu__list > li._active .menu__arrow {
           align-items: center;
 }
 
-.consultation__wrapper {
-  background-color: var(--light-blue);
-  padding: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .consultation__content {
-  background-color: var(--light-blue);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .consultation__form {
-  width: 524px;
-  height: 524px;
+  background-color: var(--light-blue);
   -webkit-box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.08);
           box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.08);
   text-align: center;
@@ -902,7 +896,8 @@ body._touch .menu__list > li._active .menu__arrow {
   font-weight: 700;
   font-size: 25px;
   line-height: 148.68%;
-  padding-top: 55px;
+  padding: 90px 160px 0px;
+  white-space: nowrap;
 }
 
 .consultation__text {
@@ -916,22 +911,22 @@ body._touch .menu__list > li._active .menu__arrow {
 .consultation__name {
   margin-top: 40px;
   margin-bottom: 10px;
-  width: 302px;
+  width: 300px;
   height: 60px;
   padding: 0 25px;
   border: none;
 }
 
-.consultation__surname {
+.consultation__surnum {
   margin-bottom: 20px;
-  width: 302px;
+  width: 300px;
   height: 60px;
   padding: 0 25px;
   border: none;
 }
 
 .consultation__button {
-  width: 302px;
+  width: 300px;
   height: 60px;
 }
 
@@ -942,15 +937,13 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 300px;
   padding-top: 10px;
   opacity: .4;
-}
-
-.consultation__img img {
-  width: 500px;
-  margin-top: 30px;
+  padding-bottom: 83px;
 }
 
 .footer {
   margin-top: 60px;
+  background-color: #F0F3F5;
+  padding: 70px;
 }
 
 .footer__content {
@@ -974,6 +967,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .footer__personal {
   margin-right: 150px;
   width: 170px;
+  cursor: pointer;
 }
 
 .footer__contact {
@@ -998,9 +992,9 @@ body._touch .menu__list > li._active .menu__arrow {
   display: flex;
 }
 
-.footer {
-  background-color: #F0F3F5;
-  padding: 70px;
+.footer__contact-number {
+  font-weight: 600;
+  color: inherit;
 }
 
 @media (min-width: 767px) {
@@ -1093,7 +1087,46 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 
   .owl-theme .owl-nav {
-    margin-top: -55px;
+    display: none;
+  }
+
+  .owl-theme .owl-dots,
+  .owl-theme .owl-nav {
+    margin-bottom: -20px;
+  }
+
+  .consultation__img {
+    display: none;
+  }
+
+  .consultation__personal-data {
+    padding-bottom: 50px;
+  }
+
+  .consultation__title {
+    padding: 50px 160px 0;
+  }
+
+  .footer {
+    padding: 50px;
+  }
+
+  .footer__personal {
+    margin-right: 40px;
+  }
+
+  .footer__icon:first-child {
+    margin-left: 0px;
+  }
+
+  .footer__contact {
+    margin-right: 100px;
+  }
+
+  .footer__content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1310,9 +1343,46 @@ body._touch .menu__list > li._active .menu__arrow {
     margin-right: 0px;
     margin-bottom: 15px;
   }
+
+  .owl-theme .owl-dots,
+  .owl-theme .owl-nav {
+    margin-bottom: 0px;
+  }
+
+  .consultation__title {
+    padding: 50px 110px 0;
+  }
+
+  .footer__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer {
+    padding: 50px;
+  }
+
+  .footer__personal {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer__contact {
+    margin-right: 0;
+  }
+
+  .footer__icon {
+    margin-left: 90px;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .header__content {
+    margin: 60px 0 30px;
+  }
+
   .header__text {
     font-size: 17px;
     width: 300px;
@@ -1320,6 +1390,10 @@ body._touch .menu__list > li._active .menu__arrow {
 
   .header__name {
     font-size: 35px;
+  }
+
+  .questions__title {
+    margin: 40px 0 30px;
   }
 
   .questions__content {
@@ -1337,6 +1411,11 @@ body._touch .menu__list > li._active .menu__arrow {
     height: 370px;
   }
 
+  .reviews__title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
   .reviews__text {
     width: 270px;
     font-size: 15px;
@@ -1351,6 +1430,77 @@ body._touch .menu__list > li._active .menu__arrow {
 
   .reviews__img img {
     margin-bottom: 15px;
+  }
+
+  .consultation {
+    margin-top: 70px;
+    background-color: var(--light-blue);
+  }
+
+  .consultation__title {
+    padding: 50px 60px 0;
+  }
+
+  .consultation__text {
+    font-size: 16px;
+    width: 285px;
+  }
+
+  .consultation__name {
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .consultation__surname {
+    width: 250px;
+  }
+
+  .consultation__button {
+    width: 250px;
+  }
+
+  .footer {
+    margin-top: 40px;
+    padding: 40px;
+  }
+
+  .footer__icon {
+    margin-left: 40px;
+  }
+
+  .footer__personal {
+    margin-bottom: 10px;
+    width: 250px;
+    margin-right: 0;
+  }
+
+  .footer__contact {
+    margin-bottom: 30px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+  }
+
+  .footer__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer__contact-number {
+    margin-left: 15px;
   }
 }
 

@@ -1,5 +1,7 @@
 .consultation {
     margin-top: 100px;
+    background-color: var(--light-blue);
+    padding: 30px;
 }
 
 .consultation__form {
@@ -8,20 +10,13 @@
     align-items: center;
 }
 
-.consultation__wrapper {
-    background-color: var(--light-blue);
-    padding: 50px;
-    display: flex;
-}
-
 .consultation__content {
-    background-color: var(--light-blue);
     display: flex;
+    justify-content: center;
 }
 
 .consultation__form {
-    width: 524px;
-    height: 524px;
+    background-color: var(--light-blue);
     box-shadow: 3px 4px 10px 1px rgba(0, 0, 0, 0.08);
     text-align: center;
 
@@ -31,7 +26,8 @@
     font-weight: 700;
     font-size: 25px;
     line-height: 148.68%;
-    padding-top: 55px;
+    padding: 90px 160px 0px;
+    white-space: nowrap;
 }
 .consultation__text {
     font-family: Montserrat;
@@ -43,20 +39,20 @@
 .consultation__name {
     margin-top: 40px;
     margin-bottom: 10px;
-    width: 302px;
+    width: 300px;
     height: 60px;
     padding: 0 25px;
     border: none;
 }
-.consultation__surname {
+.consultation__surnum {
     margin-bottom: 20px;
-    width: 302px;
+    width: 300px;
     height: 60px;
     padding: 0 25px;
     border: none;
 }
 .consultation__button {
-    width: 302px;
+    width: 300px;
     height: 60px;
 }
 
@@ -67,8 +63,5 @@
     width: 300px;
     padding-top: 10px;
     opacity: .4;
-}
-.consultation__img img{
-    width: 500px;
-    margin-top: 30px;
+    padding-bottom: 83px;
 }

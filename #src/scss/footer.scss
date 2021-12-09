@@ -1,5 +1,7 @@
 .footer {
     margin-top: 60px;
+    background-color: #F0F3F5;
+    padding: 70px;
 }
 
 .footer__content {
@@ -15,6 +17,7 @@
 .footer__personal {
     margin-right: 150px;
     width: 170px;
+    cursor: pointer;
 }
 
 .footer__contact {
@@ -37,7 +40,7 @@
     display: flex;
 }
 
-.footer {
-    background-color: #F0F3F5;
-    padding: 70px;
+.footer__contact-number {
+    font-weight: 600;
+    color: inherit;
 }
